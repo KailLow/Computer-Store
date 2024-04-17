@@ -17,4 +17,28 @@ public class StaffEntity extends NoteEntity{
     public StaffEntity(String note) {
         super(note);
     }
+
+    public StaffEntity(String note, String name, String phone, String username, String password, String role, String email, String citizenId) {
+        super(note);
+        this.name = name;
+        this.phone = phone;
+        this.username = username;
+        this.password = password;
+        this.role = role;
+        this.email = email;
+        this.citizenId = citizenId;
+    }
+
+    @Override
+    public String toString() {
+        return "StaffEntity{" +
+                "name='" + name + '\'' +
+                ", phone='" + phone + '\'' +
+                ", username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                ", role='" + role + '\'' +
+                ", email='" + email + '\'' +
+                ", citizenId='" + citizenId + '\'' +
+                '}';
+    }
 }
