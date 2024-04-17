@@ -15,18 +15,7 @@ services:
     networks:
       - postgresql
 
-  web:
-    build: .
-    ports:
-      - 8080:8000
-    depends_on:
-      - db
-    links:
-      - db
-    networks:
-      - postgresql
-
 networks:
   postgresql:
 volumes:
-  postgresql-volumne:
+  postgresql-volume:

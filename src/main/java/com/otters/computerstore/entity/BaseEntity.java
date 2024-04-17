@@ -36,4 +36,15 @@ public class BaseEntity {
     @Column(name = "modifiedby")
     @LastModifiedBy
     private String modifiedBy;
+
+    @Override
+    public String toString() {
+        return "BaseEntity{" +
+                "id=" + id +
+                ", createdDate=" + createdDate +
+                ", modifiedDate=" + modifiedDate +
+                ", createdBy='" + createdBy + '\'' +
+                ", modifiedBy='" + modifiedBy + '\'' +
+                '}';
+    }
 }
