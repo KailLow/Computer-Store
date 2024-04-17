@@ -5,24 +5,18 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table
-public class StaffEntity extends NoteEntity{
+public class StaffEntity extends BaseEntity{
     private String name;
     private String phone;
-    private String username;
     private String password;
     private String role;
     private String email;
     private String citizenId;
 
-    public StaffEntity(String note) {
-        super(note);
-    }
 
-    public StaffEntity(String note, String name, String phone, String username, String password, String role, String email, String citizenId) {
-        super(note);
+    public StaffEntity(String name, String phone, String password, String role, String email, String citizenId) {
         this.name = name;
         this.phone = phone;
-        this.username = username;
         this.password = password;
         this.role = role;
         this.email = email;
@@ -34,7 +28,6 @@ public class StaffEntity extends NoteEntity{
         return "StaffEntity{" +
                 "name='" + name + '\'' +
                 ", phone='" + phone + '\'' +
-                ", username='" + username + '\'' +
                 ", password='" + password + '\'' +
                 ", role='" + role + '\'' +
                 ", email='" + email + '\'' +

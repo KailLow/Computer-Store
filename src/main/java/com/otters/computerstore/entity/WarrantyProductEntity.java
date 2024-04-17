@@ -11,13 +11,15 @@ import lombok.Setter;
 @Setter
 public class WarrantyProductEntity extends NoteEntity{
     private String staffId;
+    private String warrantyBillId;
     private String productId;
     private Integer quantity;
     private String warrantyContent;
 
-    public WarrantyProductEntity(String note, String staffId, String productId, Integer quantity, String warrantyContent) {
+    public WarrantyProductEntity(String note, String warrantyBillId, String staffId, String productId, Integer quantity, String warrantyContent) {
         super(note);
         this.staffId = staffId;
+        this.warrantyBillId = warrantyBillId;
         this.productId = productId;
         this.quantity = quantity;
         this.warrantyContent = warrantyContent;
@@ -27,6 +29,7 @@ public class WarrantyProductEntity extends NoteEntity{
     public String toString() {
         return "WarrantyProductEntity{" +
                 "staffId='" + staffId + '\'' +
+                ", warrantyBillId='" + warrantyBillId + '\'' +
                 ", productId='" + productId + '\'' +
                 ", quantity=" + quantity +
                 ", warrantyContent='" + warrantyContent + '\'' +
