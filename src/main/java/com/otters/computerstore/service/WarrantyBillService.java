@@ -1,0 +1,14 @@
+package com.otters.computerstore.service;
+
+import com.otters.computerstore.repository.WarrantyBillRepo;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
+public class WarrantyBillService {
+    private final WarrantyBillRepo warrantyBillRepo;
+    @Autowired
+    public WarrantyBillService(WarrantyBillRepo warrantyBillRepo){
+        this.warrantyBillRepo = warrantyBillRepo;
+    }
+}
